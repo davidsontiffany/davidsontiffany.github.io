@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -523,3 +524,530 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiffany Davidson | Software Engineering, Cybersecurity & Fintech</title>
+  <meta name="description" content="Portfolio website for Tiffany Davidson featuring software engineering, cybersecurity, and fintech projects." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121933;
+      --panel: rgba(255,255,255,0.06);
+      --text: #f4f7fb;
+      --muted: #b9c2d0;
+      --accent: #7c9cff;
+      --accent-2: #7ef0c5;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 40px rgba(0,0,0,0.25);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,156,255,0.20), transparent 30%),
+        radial-gradient(circle at top right, rgba(126,240,197,0.15), transparent 25%),
+        linear-gradient(180deg, #08101d 0%, #0b1020 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(8,16,29,0.75);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--text); }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124,156,255,0.12);
+      border: 1px solid rgba(124,156,255,0.25);
+      color: #d8e1ff;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 1rem; }
+    h1 { font-size: clamp(2.2rem, 5vw, 4.4rem); }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+    h3 { font-size: 1.2rem; }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-weight: 700;
+      transition: 180ms ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #a88cff);
+      border: none;
+    }
+
+    .hero-card,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card { padding: 1.4rem; }
+
+    .profile-wrap {
+      padding: 1.2rem;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(124,156,255,0.35), rgba(126,240,197,0.22));
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.85rem;
+      border-radius: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    section { padding: 2.5rem 0; }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header p { color: var(--muted); margin: 0; max-width: 60ch; }
+
+    .grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .skills-grid,
+    .project-grid,
+    .experience-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card { padding: 1.3rem; }
+    .card p, .card li { color: var(--muted); }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: #e4ebf7;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline .card { position: relative; overflow: hidden; }
+    .timeline .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .timeline .content { padding-left: 0.8rem; }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .project-links a {
+      color: #dbe4ff;
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .contact {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+
+    .contact-box {
+      padding: 2rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      padding: 1.4rem 0 3rem;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .skills-grid,
+      .project-grid,
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Tiffany Davidson</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Software Engineering • Cybersecurity • Fintech</div>
+        <h1>Building secure, thoughtful technology for payments, fraud, and financial systems.</h1>
+        <p class="lead">
+          I’m Tiffany Davidson, a software engineer and digital finance technology graduate student focused on building systems that are practical, secure, and useful. My interests sit at the intersection of software engineering, cybersecurity, fintech, and fraud prevention.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:davidsontiffany@gmail.com">Contact Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/tiffany-davidson-04354bb8" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/davidsontiffany" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile-wrap">
+          <img class="profile-photo" src="Linkedin_Photo.jpg" alt="Tiffany Davidson headshot" />
+          <div class="mini-stats">
+            <div class="stat">
+              <strong>Based in</strong>
+              <span>Atlanta, Georgia</span>
+            </div>
+            <div class="stat">
+              <strong>Focus</strong>
+              <span>Secure software + fintech</span>
+            </div>
+            <div class="stat">
+              <strong>Education</strong>
+              <span>MIS + Digital Finance Technology</span>
+            </div>
+            <div class="stat">
+              <strong>Current goal</strong>
+              <span>Fraud, security, and engineering roles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>About Me</h2>
+          <p>A professional summary that feels more like you and less like a template.</p>
+        </div>
+      </div>
+      <div class="card">
+        <p>
+          I enjoy solving problems that sit between technology and trust. My background in management information systems, graduate studies in digital finance technology, and hands-on software engineering experience have shaped my interest in secure systems, payment technologies, fraud prevention, and practical product building. I’m especially drawn to opportunities where I can contribute to resilient engineering, risk-aware systems, and better customer experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Skills</h2>
+          <p>Keep this section recruiter-friendly by grouping related skills together.</p>
+        </div>
+      </div>
+      <div class="grid skills-grid">
+        <article class="card">
+          <h3>Programming & Development</h3>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Git/GitHub</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Data & Cloud</h3>
+          <div class="tag-list">
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">Cloud Fundamentals</span>
+            <span class="tag">DevOps Foundations</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Cybersecurity & Fintech</h3>
+          <div class="tag-list">
+            <span class="tag">Fraud Awareness</span>
+            <span class="tag">Payments</span>
+            <span class="tag">KYC/AML</span>
+            <span class="tag">PCI DSS</span>
+            <span class="tag">Risk & Compliance</span>
+            <span class="tag">Identity & Access Basics</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Experience</h2>
+          <p>Use this area to show both technical growth and business context.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <article class="card">
+          <div class="content">
+            <h3>NCR Atleos — Software/Technology Internship</h3>
+            <p>Supported technical and operational work while gaining exposure to enterprise systems, collaboration, and real-world software environments.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="content">
+            <h3>Sapphirus Systems — AI & Software Engineering Internship</h3>
+            <p>Built hands-on experience in Python, APIs, backend fundamentals, cloud concepts, and applied AI workflows through structured projects and agile collaboration.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="content">
+            <h3>State Farm — Underwriting Service Assistant</h3>
+            <p>Developed customer-facing business experience and process awareness that supports my long-term interest in risk, trust, and technology-enabled decision making.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Featured Projects</h2>
+          <p>Show 3 to 4 strong projects instead of listing everything.</p>
+        </div>
+      </div>
+      <div class="grid project-grid">
+        <article class="card">
+          <h3>Intern Directory API</h3>
+          <p>Built a FastAPI project with CRUD functionality and endpoint testing, strengthening API design, validation, and debugging skills.</p>
+          <div class="tag-list">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Postman</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/davidsontiffany" target="_blank" rel="noreferrer">View My GitHub</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Cross-Border Payments Case Study</h3>
+          <p>Analyzed Stripe, Adyen, and Wise for a Canadian SaaS company expanding into the US and Europe, with a focus on fees, compliance, and scalability.</p>
+          <div class="tag-list">
+            <span class="tag">Fintech</span>
+            <span class="tag">Payments</span>
+            <span class="tag">Compliance</span>
+          </div>
+          <div class="project-links">
+            <a href="#contact">View Case Study Summary</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Machine Learning Labs</h3>
+          <p>Explored regression and classification workflows using Python, pandas, and scikit-learn, including model evaluation, threshold tuning, and visualization.</p>
+          <div class="tag-list">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Python</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+          <div class="project-links">
+            <a href="#contact">View Notebook Links</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="card contact-box">
+        <h2>Let’s Connect</h2>
+        <p class="lead" style="margin: 0 auto 1.4rem;">
+          I’m interested in software engineering, cybersecurity, fintech, fraud prevention, and opportunities where secure systems and thoughtful engineering matter.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="mailto:davidsontiffany@gmail.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/tiffany-davidson-04354bb8" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/davidsontiffany" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Tiffany Davidson. Built with intention.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const links = document.querySelectorAll('.nav-links a');
+    const sections = [...links].map(link => document.querySelector(link.getAttribute('href')));
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY + 120;
+      sections.forEach((section, index) => {
+        if (!section) return;
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        if (scrollY >= top && scrollY < bottom) {
+          links.forEach(link => link.classList.remove('active'));
+          links[index].classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+>>>>>>> 1a3e9d2b42b83018d17ca48113576b7ba049a558
